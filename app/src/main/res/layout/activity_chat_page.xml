@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".ChatPageActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvActionBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/status_bar_color"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPersonPic"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/profile_pic"
+            app:shapeAppearance="@style/Circular"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPersonName"
+            />
+
+        <TextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/aaditya"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toEndOf="@id/ivPersonPic"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_vert_dot"
+            android:paddingHorizontal="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout
+    android:weightSum="8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:gravity="center"
+    >
+    <EditText
+        android:layout_weight="7"
+        android:id="@+id/etMessageField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/et_background"
+        android:elevation="@dimen/_10sdp"
+        android:hint="Message"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_10sdp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_weight="1"
+        android:id="@+id/ivSendIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:src="@drawable/send_icon_green"/>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
